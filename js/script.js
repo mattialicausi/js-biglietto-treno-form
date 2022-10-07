@@ -8,6 +8,7 @@
 // x L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
+
 // const kmDesiderati = parseInt(prompt('Quanti chilometri vuoi percorrere?'));
 // console.log(kmDesiderati);
 
@@ -54,3 +55,50 @@
 
 // let elemento3 = document.getElementById('km-desiderati');
 // elemento3.innerHTML = 'I chilometri che vuoi percorrere: ' + kmDesiderati;
+
+
+
+const etaUtente = document.getElementById('eta-utente').value;
+console.log(etaUtente);
+
+const kmDesiderati = document.getElementById('km-desiderati').value;
+console.log(kmDesiderati);
+
+console.log(isNaN(kmDesiderati), isNaN(etaUtente));
+// if(isNaN(kmDesiderati) || isNaN(etaUtente)){
+//     alert('Puoi inserire solo numeri');
+// }
+
+
+const prezzoKm = 0.21;
+let prezzoFinale = 0;
+
+let prezzoBiglietto = prezzoKm * kmDesiderati;
+prezzoBiglietto = prezzoBiglietto.toFixed(2);
+console.log(prezzoBiglietto);
+
+
+if(etaUtente < 18){
+     prezzoFinale = (prezzoBiglietto * 20) / 100;
+     prezzoFinale = prezzoFinale.toFixed(2);
+     // alert('Sei minorenne, hai uno sconto del 20%!');
+     console.log (prezzoFinale);
+
+  }  else if(etaUtente > 65){
+         prezzoFinale = (prezzoBiglietto * 40) / 100;
+         prezzoFinale = prezzoFinale.toFixed(2);
+     //     alert('Hai più di 65 anni, hai uno sconto del 40%!');
+         console.log (prezzoFinale);
+         
+    } else{
+         prezzoFinale = prezzoBiglietto;
+         console.log(prezzoFinale);
+    }
+
+    document.addEventListener("click");
+    function click() {
+     document.getElementById("risultato").innerHTML= prezzoFinale;
+   }
+
+   
+

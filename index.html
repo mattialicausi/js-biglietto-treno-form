@@ -12,9 +12,20 @@
  <h1>Biglietteria dei treni</h1>
  <h2>Acquista il tuo biglietto</h2>
 
- <input id="eta-utente" type="text">
- <input id="km-desiderati" type="text">
- <input id="prezzo-biglietto" type="button" value="Calcola">
+ <label>Inserisci la tua et&agrave;: </label>
+ <input id="eta-utente" type="text" maxlength="2">
+ <p><div id="risultato-eta-utente"></div></p> 
+
+ <label>Inserisci i chilometri che vuoi percorrere: </label>
+ <input id="km-desiderati" type="text" maxlength="5">
+ <p><div id="risultato-km-desiderati"></div></p> 
+
+ <input id="prezzo-biglietto" type="button" onclick="calcola()" value="Calcola">
+ <p><div id="prezzo-finale"></div></p> 
+
+
+
+
 
     <script src="js/script.js"></script>
 </body>
