@@ -8,97 +8,55 @@
 // x L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
+const btn = document.getElementById('risultato');
 
-// const kmDesiderati = parseInt(prompt('Quanti chilometri vuoi percorrere?'));
-// console.log(kmDesiderati);
+ const calcolaBiglietto = function(){
+          let etaUtente = document.getElementById('eta-utente').value;
+          console.log(etaUtente);
 
-// const etaUtente = parseInt(prompt('Quanti anni hai?'));
-// console.log(etaUtente);
+          let kmDesiderati = document.getElementById('km-desiderati').value;
+          console.log(kmDesiderati);
 
-
-// console.log(isNaN(kmDesiderati), isNaN(etaUtente));
-// if(isNaN(kmDesiderati) || isNaN(etaUtente)){
-//     alert('Puoi inserire solo numeri');
-// }
-
-
-// let prezzoKm = 0.21;
-
-// let prezzoFinale = 0;
-
-// let prezzoBiglietto = prezzoKm * kmDesiderati;
-// prezzoBiglietto = prezzoBiglietto.toFixed(2);
-// console.log(prezzoBiglietto);
+          console.log(isNaN(kmDesiderati), isNaN(etaUtente));
+          // if(isNaN(kmDesiderati) || isNaN(etaUtente)){
+          //      alert('Puoi inserire solo numeri');
+          //  }
 
 
-// if(etaUtente < 18){
-//      prezzoFinale = (prezzoBiglietto * 20) / 100;
-//      prezzoFinale = prezzoFinale.toFixed(2);
-//      alert('Sei minorenne, hai uno sconto del 20%!');
-//      console.log (prezzoFinale);
-//   }  else if(etaUtente > 65){
-//          prezzoFinale = (prezzoBiglietto * 40) / 100;
-//          prezzoFinale = prezzoFinale.toFixed(2);
-//          alert('Hai più di 65 anni, hai uno sconto del 40%!');
-//          console.log (prezzoFinale);
-//     } else{
-//          prezzoFinale = prezzoBiglietto;
-//          console.log(prezzoFinale);
-//     }
+          const prezzoKm = 0.21;
+          let prezzoFinale = 0;
 
+          let prezzoBiglietto = prezzoKm * kmDesiderati;
+          prezzoBiglietto = prezzoBiglietto.toFixed(2);
+          console.log(prezzoBiglietto);
 
-// let elemento = document.getElementById('risultato');
-// elemento.innerHTML = 'Prezzo del biglietto: ' + prezzoFinale + ' €';
+          if(etaUtente < 18){
+               prezzoFinale = (prezzoBiglietto * 20) / 100;
+               prezzoFinale = prezzoFinale.toFixed(2);
+               // alert('Sei minorenne, hai uno sconto del 20%!');
+               console.log (prezzoFinale);
 
-// let elemento2 = document.getElementById('eta-utente');
-// elemento2.innerHTML = 'La tua età: ' + etaUtente;
+          }  else if(etaUtente > 65){
+               prezzoFinale = (prezzoBiglietto * 40) / 100;
+               prezzoFinale = prezzoFinale.toFixed(2);
+               //     alert('Hai più di 65 anni, hai uno sconto del 40%!');
+               console.log (prezzoFinale);
 
-// let elemento3 = document.getElementById('km-desiderati');
-// elemento3.innerHTML = 'I chilometri che vuoi percorrere: ' + kmDesiderati;
+          } else{
+               prezzoFinale = prezzoBiglietto;
+               console.log(prezzoFinale);
+          }
+}
+
+btn.addEventListener('click', calcolaBiglietto);
 
 
 
-const etaUtente = document.getElementById('eta-utente').value;
-console.log(etaUtente);
-
-const kmDesiderati = document.getElementById('km-desiderati').value;
-console.log(kmDesiderati);
-
-console.log(isNaN(kmDesiderati), isNaN(etaUtente));
-// if(isNaN(kmDesiderati) || isNaN(etaUtente)){
-//     alert('Puoi inserire solo numeri');
-// }
 
 
-const prezzoKm = 0.21;
-let prezzoFinale = 0;
-
-let prezzoBiglietto = prezzoKm * kmDesiderati;
-prezzoBiglietto = prezzoBiglietto.toFixed(2);
-console.log(prezzoBiglietto);
 
 
-if(etaUtente < 18){
-     prezzoFinale = (prezzoBiglietto * 20) / 100;
-     prezzoFinale = prezzoFinale.toFixed(2);
-     // alert('Sei minorenne, hai uno sconto del 20%!');
-     console.log (prezzoFinale);
-
-  }  else if(etaUtente > 65){
-         prezzoFinale = (prezzoBiglietto * 40) / 100;
-         prezzoFinale = prezzoFinale.toFixed(2);
-     //     alert('Hai più di 65 anni, hai uno sconto del 40%!');
-         console.log (prezzoFinale);
-         
-    } else{
-         prezzoFinale = prezzoBiglietto;
-         console.log(prezzoFinale);
-    }
-
-    document.addEventListener("click");
-    function click() {
-     document.getElementById("risultato").innerHTML= prezzoFinale;
-   }
+  
 
    
 
