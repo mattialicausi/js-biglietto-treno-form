@@ -51,9 +51,9 @@ const btn = document.getElementById('risultato');
           }
 
           // print();
-          document.getElementById('risultato-eta-utente').innerHTML = etaUtente;
-          document.getElementById('risultato-km-desiderati').innerHTML = kmDesiderati;
-          document.getElementById('prezzo-finale').innerHTML = prezzoFinale;
+          document.getElementById('risultato-eta-utente').innerHTML ='Hai '+ etaUtente + ' anni';
+          document.getElementById('risultato-km-desiderati').innerHTML ='Vuoi percorrere ' + kmDesiderati + 'km';
+          document.getElementById('prezzo-finale').innerHTML ='Il prezzo del biglietto è: ' + prezzoFinale + '€';
 }
 
 

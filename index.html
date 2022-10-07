@@ -9,20 +9,51 @@
     <title>calcolo del prezzo del biglietto del treno</title>
 </head>
 <body>
- <h1>Biglietteria dei treni</h1>
- <h2>Acquista il tuo biglietto</h2>
+    <div class="my-container text-center">
+        <div class="row text-center m-5 my-img">
+         <h1>Biglietteria dei treni</h1>
+            <h2>Acquista il tuo biglietto</h2>
+        </div>
 
- <label>Inserisci la tua et&agrave;: </label>
- <input id="eta-utente" type="text" maxlength="2">
- <p id="risultato-eta-utente"><div ></div></p> 
+         <div class="row pb-4">
+                <div class="col-4">
+                     <label>Inserisci la tua et&agrave;: </label>
+                </div>
+                <div class="col-4">
+                     <label>Inserisci i chilometri che vuoi percorrere: </label>  
+                </div>
+                <div class="col-4">
+                    <label>Il prezzo del tuo biglietto: </label> 
+                </div>
+            </div>
 
- <label>Inserisci i chilometri che vuoi percorrere: </label>
- <input id="km-desiderati" type="text" maxlength="5">
- <p id="risultato-km-desiderati"><div ></div></p> 
+        <div class="row">
+            <div class="col-4">
+                <input id="eta-utente" type="text" maxlength="2">
+            </div>
+            <div class="col-4">
+                 <input id="km-desiderati" type="text" maxlength="5">
+            </div>
+            <div class="col-4">
+                <input id="risultato" type="button" onclick="calcolaBiglietto()" value="Calcola">
+            </div>
 
- <input id="risultato" type="button" onclick="calcolaBiglietto()" value="Calcola">
- <p id="prezzo-finale"><div ></div></p> 
- <p id="sconto"></p>
+           
+       <div class="row pt-2">
+        <div class="col-4">
+             <p id="risultato-eta-utente"></p> 
+        </div>
+        <div class="col-4">
+             <p id="risultato-km-desiderati"></p> 
+        </div>
+        <div class="col-4">
+             <p id="prezzo-finale"></p> 
+            <p id="sconto"></p>
+        </div>
+       </div>
+           
+    </div>
+ 
 
 
 
