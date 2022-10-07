@@ -36,19 +36,46 @@ const btn = document.getElementById('risultato');
                // alert('Sei minorenne, hai uno sconto del 20%!');
                console.log (prezzoFinale);
 
+
           }  else if(etaUtente > 65){
                prezzoFinale = (prezzoBiglietto * 40) / 100;
                prezzoFinale = prezzoFinale.toFixed(2);
                //     alert('Hai più di 65 anni, hai uno sconto del 40%!');
                console.log (prezzoFinale);
 
+
           } else{
                prezzoFinale = prezzoBiglietto;
                console.log(prezzoFinale);
+               
+          }
+
+          const mostraEta = function(){
+               document.getElementById('risultato-eta-utente').innerHTML = etaUtente;
+          }
+
+          const mostrakm = function(){
+               document.getElementById('risultato-km-desiderati').innerHTML = kmDesiderati;
+          }
+
+          const mostraTotale = function(){
+               document.getElementById('prezzo-finale').innerHTML = prezzoFinale;
           }
 }
 
 btn.addEventListener('click', calcolaBiglietto);
+
+// const elemento1 = document.getElementById('risultato-eta-utente');
+// console.log(elemento1);
+// const risultatoEta = elemento1.querySelector('div');
+
+// const elemento2 = document.getElementById('risultato-km-desiderati');
+// console.log(elemento2);
+// const risultatoKmDesiderati = elemento2.querySelector('div');
+
+// const elemento3 = document.getElementById('prezzo-finale');
+// console.log(elemento3);
+// const prezzoFinale = elemento3.querySelector('div');
 
 
 
